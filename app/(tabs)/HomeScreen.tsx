@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import React from "react";
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 
@@ -6,11 +7,14 @@ export default function HomeScreen() {
   return (
     <ScrollView className="flex-1 bg-white px-4">
       {/* Header */}
-      <View className="flex-row justify-between items-center mt-10 mb-4">
-        <Text className="text-xl font-bold">HomeFinder</Text>
+      <View className="flex-row justify-between items-end p-3 mt-10 mb-4 bg-black h-24 rounded-b-3xl">
+        <View className="flex-row space-x-2">
+          <Ionicons name="home" size={24} color="white" />
+          <Text className="text-xl font-bold text-white">HomeFinder</Text>
+        </View>
         <View className="flex-row space-x-4">
-          <Ionicons name="notifications-outline" size={24} color="black" />
-          <Ionicons name="mail-outline" size={24} color="black" />
+          <Ionicons name="notifications-outline" size={24} color="white" />
+          <Ionicons name="mail-outline" size={24} color="white" />
         </View>
       </View>
 
@@ -61,15 +65,9 @@ export default function HomeScreen() {
       </ScrollView>
 
       {/* Promo Banner */}
-      <View className="bg-yellow-100 rounded-lg p-4 mb-6">
-        <Text className="font-bold text-gray-800 mb-1">
-          Could Not Find The Right Property?
-        </Text>
-        <TouchableOpacity>
-          <Text className="text-green-600 font-semibold">Try Map Search</Text>
-        </TouchableOpacity>
+      <View className="">
+        <Image source={require('@/assets/images/Frame3.png')} className="w-full h-4" resizeMode="stretch" />
       </View>
-
       {/* Least Expensive */}
       <View className="flex-row justify-between items-center mb-3">
         <Text className="text-lg font-semibold">Least Expensive</Text>
@@ -78,7 +76,9 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
 
-      {/*I'll add more listings here */}
+      <View>
+        <Link href={'/Welcome'}>Welcome</Link>
+      </View>
     </ScrollView>
   );
 }

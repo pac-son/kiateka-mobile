@@ -17,8 +17,8 @@ export default function Index() {
       <View>
         <Text className=" self-center">Kiateka</Text>
         <Text>Finding the perfect home for you</Text>
-        <Pressable onPress={() => {router.push('/Login')}}>
-          <Text>Login</Text>
+        <Pressable onPress={() => {router.push('/Register')}}>
+          <Text>Register</Text>
         </Pressable>
       </View>
     </View>

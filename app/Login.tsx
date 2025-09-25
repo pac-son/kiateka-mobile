@@ -12,7 +12,7 @@ const Login = () => {
     </View>
 
     <View className="flex-1">
-      <Text>Do not have an acount?<Link href={'/Login'} className="text-green-400 underline">Sign Up</Link></Text>
+      <Text>Do not have an acount?<Link href={'/Register'} className="text-green-400 underline">Sign Up</Link></Text>
     </View>
 
     <View className="flex-start my-4 mx-2 gap-1 ">
