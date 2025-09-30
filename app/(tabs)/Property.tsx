@@ -1,3 +1,4 @@
+import AppHeader from "@/components/AppHeader";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import {
@@ -46,16 +47,7 @@ export default function Property() {
   return (
     <ScrollView className="flex-1 bg-white px-4">
       {/* Header */}
-      <View className="flex-row justify-between items-end p-3 mt-10 mb-4 bg-black h-24 rounded-b-3xl">
-        <View className="flex-row space-x-2">
-          <Ionicons name="home" size={24} color="white" />
-          <Text className="text-xl font-bold text-white">HomeFinder</Text>
-        </View>
-        <View className="flex-row space-x-4">
-          <Ionicons name="notifications-outline" size={24} color="white" />
-          <Ionicons name="mail-outline" size={24} color="white" />
-        </View>
-      </View>
+      <AppHeader />
 
       {/* Search + Filters */}
       <View className="mb-4">

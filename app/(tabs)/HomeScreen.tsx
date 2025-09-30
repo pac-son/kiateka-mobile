@@ -1,3 +1,4 @@
+import AppHeader from "@/components/AppHeader";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
@@ -5,18 +6,10 @@ import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "reac
 
 export default function HomeScreen() {
   return (
-    <ScrollView className="flex-1 bg-white px-4">
-      {/* Header */}
-      <View className="flex-row justify-between items-end p-3 mt-10 mb-4 bg-black h-24 rounded-b-3xl">
-        <View className="flex-row space-x-2">
-          <Ionicons name="home" size={24} color="white" />
-          <Text className="text-xl font-bold text-white">HomeFinder</Text>
-        </View>
-        <View className="flex-row space-x-4">
-          <Ionicons name="notifications-outline" size={24} color="white" />
-          <Ionicons name="mail-outline" size={24} color="white" />
-        </View>
-      </View>
+    <View className="flex-1 bg-white">
+      <AppHeader /> 
+
+      <ScrollView className="flex-1 bg-white px-4">
 
       {/* Search Bar */}
       <View className="flex-row items-center bg-gray-100 rounded-full px-4 py-3 mb-6">
@@ -80,5 +73,6 @@ export default function HomeScreen() {
         <Link href={'/Welcome'}>Welcome</Link>
       </View>
     </ScrollView>
+    </View>
   );
 }
